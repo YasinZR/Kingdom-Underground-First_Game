@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="menu">
+        <h1>Меню</h1>
+          <div class="col"> 
+            <input type="text" id="player-name" placeholder="Введите ваше имя" required maxlength="10">
+            <button id="start-button">Начать</button>
+            <button id="help-button">Помощь</button>
+            <button id="ex-button">Выход</button>
+        </div>
+      </div>
+      <div id="help-popup" class="popup">
+        <h2>Помощь</h2>
+        <p>Цель игры:</p>
+        <p>Ваша задача заключается в продвижении через различные уровни, сражении с врагами и преодолении сложностей, чтобы достичь последней комнаты и завершить игру. Вам предстоит использовать свои навыки управления персонажем, тактическое мышление и реакцию, чтобы преодолеть препятствия, уничтожить врагов и успешно пройти каждый уровень. Только достигнув этой цели, вы завершите игру и станете победителем.</p>
+        <p>Управление:</p>
+        <ul>
+          <li>W - Прыжок</li>
+          <li>A - Движение влево</li>
+          <li>D - Движение вправо</li>
+          <li>F - Открыть дверь</li>
+          <li>Space - Атака</li>
+        </ul>
+        <button id="close-button">Закрыть</button>
+      </div>
+      <!-- // YASIN ПЕРЕНЕСТИ НАДО  -->
+      <div id="game">
+        <div class="level">Level:<span id="level"></span></div>
+        <div id="Score">Score:<span id="score">0</span></div>
+      </div>
+      <div><span id="time"></span></div>
+      <div id="boss"></div>
+
+      <!-- // YASIN ПЕРЕНЕСТИ НАДО  -->
+    <div class="head">
+        <div id="playerText__2"></div>
+        <div id="playerText"></div>
+
+        <div class="child">
+            <!-- <div class="par__playerHealth">
+                <div class="playerHealth"></div>
+                <div id="playerHealth" class="child__playerHealth"></div>
+            </div> -->
+
+
+            <div class="par__enemyHealth">
+                <div class="enemyHealth"></div>
+                <div id="enemy1__1Health" class="child__enemyHealth"></div>
+            </div> 
+
+            <div class="par__enemyHealth">
+                <div class="enemyHealth"></div>
+                <div id="enemy2__1Health" class="child__enemyHealth"></div>
+            </div> 
+
+            <div class="par__enemyHealth">
+                <div class="enemyHealth"></div>
+                <div id="enemy2__2Health" class="child__enemyHealth"></div>
+            </div> 
+
+            <div class="par__enemyHealth">
+                <div class="enemyHealth"></div>
+                <div id="enemy2__3Health" class="child__enemyHealth"></div>
+            </div> 
+
+            <div class="par__enemyHealth">
+                <div class="enemyHealth"></div>
+                <div id="enemy3__1Health" class="child__enemyHealth"></div>
+            </div> 
+
+            <div class="par__enemyHealth">
+                <div class="enemyHealth"></div>
+                <div id="enemy3__2Health" class="child__enemyHealth"></div>
+            </div> 
+            
+            <div id="par__enemyBigPigHealth">
+                <div class="enemyBigPigHealth"></div>
+                <div id="enemyBigPigHealth" class="child__enemyBigPigHealth"></div>
+            </div>    
+        </div>
+
+        <div id="displayText" class="tie">
+            Tie
+        </div>
+
+        <canvas id="canvas"></canvas>
+    </div>
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.js"></script>
+    <script 
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js" integrity="sha512-Mf/xUqfWvDIr+1B6zfnIDIiG7XHzyP/guXUWgV6PgaQoIFeXkJQR5XWh9fqAiCiRCpemabt3naV4jhDWVnuYDQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+  </script>
+    <script src="js/utils.js"></script>
+    <script src="js/data/collisions.js"></script>
+    <script src="js/classes/CollisionBlock.js"></script>
+    <script src="js/classes/Sprite.js"></script>
+    <script src="js/classes/Enemy.js"></script>
+    <script src="js/classes/bigPig.js"></script>
+    <script src="js/classes/Player.js"></script>
+    <script src="js/eventListeners.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>
